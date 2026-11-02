@@ -591,7 +591,7 @@ const lessonData = [
     ["；", "", "", ""],
     ["我", "wǒ", "I", "saya"],
     ["甚至", "shèn zhì", "even", "malah"],
-    ["怨恨", "yuàn h恨", "resent / blame", "marah / terkilan"],
+    ["怨恨", "yuàn hèn", "resent / blame", "marah / terkilan"],
     ["它", "tā", "it", "terhadapnya"],
     ["这么多年", "zhè me duō nián", "for so many years", "selama bertahun-tahun ini"],
     ["竟会", "jìng huì", "could actually", "sanggup pula"],
