@@ -1,20 +1,18 @@
 // ==========================================================================
-// 📝 《丑石》综合练习题库 (questions.js) - 马来西亚 UASA/KSSM 本地考卷标准版
-// 甲组：客观选择题（10题，含引文框、I/II/III/IV组合题、排序题、修辞作用题）
-// 乙组：主观简答题（15分制，含 [1分]/[2分] 采分点、KBAT题及随文语文知识题）
+// 📝 《丑石》综合练习题库 (questions.js) - 画线词醒目下划线修复版
 // ==========================================================================
 
 const PT = (pts) => `<span style="display:inline-block; background:var(--primary-color); color:#fff; font-size:11px; font-weight:800; padding:0 5px; margin:0 3px; border-radius:4px;">[${pts}分]</span>`;
 
 const QUOTE_BOX = (text) => `<div style="margin:6px 0 10px 0; padding:8px 12px; background:var(--notebook-bg); border-left:3px solid var(--primary-color); border-radius:4px; font-weight:600; font-size:14.5px; color:var(--text-color); line-height:1.65;">${text}</div>`;
 
-// ==========================================================================
-// 甲组：现代文理解客观题（10分，每题1分）
-// ==========================================================================
+const HL = (text) => `<u style="text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:4px; color:var(--primary-color); font-weight:800;">${text}</u>`;
+
+// 甲组：现代文理解客观题（10分）
 const quizDataList = [
     {
         id: 1,
-        question: "在第1段和第2段中，村里人认为门前那块丑石“毫无用处”的理由包括哪些？<br><span style='font-weight:600; font-size:14px; display:inline-block; margin-top:6px; line-height:1.7;'>I 形状极不规则，没棱角儿也没平面儿，垒不成山墙和台阶<br>II 石质太过细密，连石匠也摇头嫌弃它不能用来做石磨<br>III 不像汉白玉那样细腻，不能凿下来刻字雕花<br>IV 石头内部早已被虫蛀空，一碰就会碎裂成粉末</span>",
+        question: "在第1段和第2段中，村里人认为门前那块丑石“毫无用处”的理由包括哪些？<br><span style='font-weight:500; font-size:14px; display:inline-block; margin-top:6px; line-height:1.7;'>I 形状极不规则，没棱角儿也没平面儿，垒不成山墙和台阶<br>II 石质太过细密，连石匠也摇头嫌弃它不能用来做石磨<br>III 不像汉白玉那样细腻，不能凿下来刻字雕花<br>IV 石头内部早已被虫蛀空，一碰就会碎裂成粉末</span>",
         options: [
             "A I、II 和 III",
             "B I、II 和 IV",
@@ -50,7 +48,7 @@ const quizDataList = [
     },
     {
         id: 4,
-        question: `${QUOTE_BOX("他在我家门前路过，突然发现了这块石头，眼光立即就拉直了。")}第4段中“眼光立即就拉直了”这一细节描写，生动表现了天文学家怎样的状态？`,
+        question: `${QUOTE_BOX(`他在我家门前路过，突然发现了这块石头，眼光立即就${HL("拉直了")}。`)}第4段中画线短语“${HL("拉直了")}”这一细节描写，生动表现了天文学家怎样的状态？`,
         options: [
             "A 旅途劳顿身体疲乏，猛然停步时视线变得模糊。",
             "B 惊讶农家门前脏乱，对挡路的巨石感到很不满。",
@@ -62,7 +60,7 @@ const quizDataList = [
     },
     {
         id: 5,
-        question: "随着情节推进，“我”和家人对丑石的态度发生了巨大转变。按文章先后顺序排列。<br><span style='font-weight:600; font-size:14px; display:inline-block; margin-top:6px; line-height:1.7;'>I 惊奇赞叹 &nbsp;&nbsp;&nbsp;&nbsp; II 羞愧敬仰 &nbsp;&nbsp;&nbsp;&nbsp; III 遗憾嫌弃 &nbsp;&nbsp;&nbsp;&nbsp; IV 咒骂无奈</span>",
+        question: "随着情节推进，“我”和家人对丑石的态度发生了巨大转变。按文章先后顺序排列。<br><span style='font-weight:500; font-size:14px; display:inline-block; margin-top:6px; line-height:1.7;'>I 惊奇赞叹 &nbsp;&nbsp;&nbsp;&nbsp; II 羞愧敬仰 &nbsp;&nbsp;&nbsp;&nbsp; III 遗憾嫌弃 &nbsp;&nbsp;&nbsp;&nbsp; IV 咒骂无奈</span>",
         options: [
             "A III → IV → I → II",
             "B III → I → IV → II",
@@ -134,9 +132,7 @@ const quizDataList = [
     }
 ];
 
-// ==========================================================================
 // 乙组：现代文理解简答题（15分制 + 随文语文知识训练）
-// ==========================================================================
 const essayDataList = [
     {
         id: 1,
@@ -152,7 +148,7 @@ const essayDataList = [
     },
     {
         id: 3,
-        question: `${QUOTE_BOX("我感到自己的可耻，也感到了丑石的伟大；我甚至怨恨它这么多年竟会默默地忍受着这一切？而我又立即深深地感到它那种不屈于误解、寂寞的生存的伟大。")}（三）第12段中，“我”为什么会感到“可耻”？句中的“怨恨”表达了作者怎样的真实情感？ <span style="color:var(--primary-color);">[3分]</span>`,
+        question: `${QUOTE_BOX(`我感到自己的${HL("可耻")}，也感到了丑石的伟大；我甚至${HL("怨恨")}它这么多年竟会默默地忍受着这一切？而我又立即深深地感到它那种不屈于误解、寂寞的生存的伟大。`)}（三）第12段中，“我”为什么会感到“${HL("可耻")}”？句中的“${HL("怨恨")}”表达了作者怎样的真实情感？ <span style="color:var(--primary-color);">[3分]</span>`,
         sampleAnswer: `“我”感到“可耻”，是因为羞愧于自己过去仅凭浅薄的世俗功利眼光，去嫌弃、咒骂一块来自天宇的伟大陨石${PT(1)}。<br>句中的“怨恨”并非真正的仇恨（贬词褒用），而是作者对丑石深切的心疼、怜惜与崇敬，心疼它数百年来默默承受世人的污蔑与冷落却从不辩解${PT(2)}。`,
         teacherAnalysis: "<strong>【人物心情与词义揣摩题】</strong>参照第12段。剖析“可耻”的自省心理（1分）及“怨恨”背后心疼敬仰的深层情感（2分）。"
     },
@@ -165,10 +161,12 @@ const essayDataList = [
     {
         id: 5,
         question: `（五）<strong>【随文语文知识训练】</strong>阅读下面的句子，完成第 a 至 d 小题： <span style="color:var(--primary-color);">[附加4分]</span><br>` +
-                  `a. “不久便来了车，<strong>小心翼翼</strong>地将它运走了。”——写出画线词语的<strong>词性</strong>。<br>` +
+                  `<div style="font-weight:500; margin-top:8px; line-height:1.9;">` +
+                  `a. “不久便来了车，${HL("小心翼翼")}地将它运走了。”——写出画线词语的<strong>词性</strong>。<br>` +
                   `b. “他在我家门前路过，突然发现了这块石头。”——写出句中的一个<strong>偏正短语</strong>。<br>` +
                   `c. “<strong>虽</strong>时时咒骂它，嫌弃它，<strong>也</strong>无可奈何，只好任它留在那里去了。”——写出上面句子的<strong>复句类型</strong>。<br>` +
-                  `d. “院边的槐荫没有庇覆它，花儿也不再在它身边生长。”——写出上面句子所采用的<strong>修辞手法</strong>。`,
+                  `d. “院边的槐荫没有庇覆它，花儿也不再在它身边生长。”——写出上面句子所采用的<strong>修辞手法</strong>。` +
+                  `</div>`,
         sampleAnswer: `a. 词性：<strong>形容词</strong>（作状语修饰“运走”）${PT(1)}<br>` +
                       `b. 偏正短语：<strong>我家门前</strong>（或：这块石头）${PT(1)}<br>` +
                       `c. 复句类型：<strong>转折复句</strong>（或让步转折复句，标志词：“虽……也……”）${PT(1)}<br>` +
